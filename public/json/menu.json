@@ -1,0 +1,44 @@
+{
+    "item":
+    [
+{
+    "image":"/img/Item-1.jpeg",
+    "title": "chicken fried salad",
+    "price": "1500",
+    "desc":"A food with a sharp taste. Often used to refer to tart or sour foods as well.",
+    "link":"/product_page"},
+{
+    "image":"/img/Item-2.jpeg",
+    "title": "chicken fried salad",
+    "price": "2000",
+    "desc":"A food with a sharp taste. Often used to refer to tart or sour foods as well.",
+    "link":"/product_page"},
+{
+    "image":"/img/Item-3.jpeg",
+    "title": "my salad",
+    "price": "3500",
+    "desc":"A food with a sharp taste. Often used to refer to tart or sour foods as well.",
+    "link":"/product_page"},
+{
+    "image":"/img/Item-4.jpeg",
+    "title": "chicken fried salad",
+    "price": "2000",
+    "desc":"A food with a sharp taste. Often used to refer to tart or sour foods as well.",
+    "link":"/product_page"},
+{
+    "image":"/img/Item-5.jpeg",
+    "title": "chicken fried salad",
+    "price": "2599",
+    "desc":"A food with a sharp taste. Often used to refer to tart or sour foods as well.",
+    "link":"/product_page"},
+{
+    "image":"/img/Item-5.jpeg",
+    "title": "chicken fried salad",
+    "price": "1599",
+    "desc":"A food with a sharp taste. Often used to refer to tart or sour foods as well.",
+    "link":"/product_page"}
+
+
+
+    ]   
+}

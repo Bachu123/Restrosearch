@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\css\style.css">
+
+    <title>Our Menu</title>
+</head>
+<body>
+</head>
+<body>
+  <%-include('../partials/header.ejs')%>
+
+          <section>
+
+            <div class="menu">
+  
+              <div class="single-menu">
+                <div class="image">
+  
+                </div>
+                <div class="menu-content">
+  
+                </div>
+              </div>
+              <div class="single-menu">
+                <div class="image">
+  
+                </div>
+                <div class="menu-content">
+  
+                </div>
+              </div>
+              <div class="single-menu">
+                <div class="image">
+  
+                </div>
+                <div class="menu-content">
+  
+                </div>
+              </div>
+              <div class="single-menu">
+                <div class="image">
+  
+                </div>
+                <div class="menu-content">
+  
+                </div>
+              </div>
+              <div class="single-menu">
+                <div class="image">
+  
+                </div>
+                <div class="menu-content">
+  
+                </div>
+              </div>
+              <div class="single-menu">
+                <div class="image">
+  
+                </div>
+                <div class="menu-content">
+  
+                </div>
+              </div>
+  
+            </div>
+          </section>
+        
+       
+          <script>
+            async function loadmenpage() {
+      
+              let request = new Request("/json/menu.json")
+              let response = await fetch(request)
+              
+              
+              let json_obj = await response.json()
+              
+              loadgrid(json_obj)
+              
+            }
+      
+            let imagemain=document.querySelectorAll(".image")
+            let descmain=document.querySelectorAll(".menu-content")
+            
+      
+            function loadgrid(json_obj) 
+      
+            {
+      
+              // document.createElement('img')
+              
+              for (i = 0; i < 6; i++) {
+      
+                
+                let container = document.createElement("div")
+                let image = document.createElement("img")
+                let title = document.createElement("h4")
+                let desc = document.createElement("p")
+                let link = document.createElement("a")
+                let price = document.createElement("span")
+                
+                
+                image.src = json_obj["item"][i]["image"]
+                
+                title.innerHTML = json_obj["item"][i]["title"]
+                price.innerHTML = json_obj["item"][i]["price"]
+                desc.innerHTML = json_obj["item"][i]["desc"]
+                link.href = json_obj["item"][i]["link"]
+                
+                container.appendChild(title)
+                
+                container.appendChild(price)
+                container.appendChild(desc)
+                
+                
+               
+                
+                link.appendChild(image)
+                
+                imagemain[i].appendChild(link)
+                descmain[i].appendChild(container)
+                
+              }
+            }
+          
+            loadmenpage()
+          </script>
+ <%-include('../partials/footer.ejs')%>
